@@ -1,7 +1,9 @@
+import { API_BASE_URL } from '../../config';
+
 //fetch
 export const fetchData = (user) => dispatch => {
   dispatch(request());
-  fetch(`http://localhost:8000/${user}`).then(res => {
+  fetch(`http://${API_BASE_URL}/${user}`).then(res => {
     if(!res.ok) {
       return Promise.reject(res.statusText)
     }
@@ -17,7 +19,7 @@ export const fetchData = (user) => dispatch => {
 export const postData = ({user, date, text}) => dispatch => {
   console.log('user ', user, 'text ', text)
   dispatch(request());
-  fetch(`http://localhost:8000/${user}`, {
+  fetch(`http://${API_BASE_URL}/${user}`, {
     method: 'POST',
     body: JSON.stringify({
       name: user,
@@ -42,7 +44,7 @@ export const postData = ({user, date, text}) => dispatch => {
 
 //delete
 export const deleteData = (id, user, date, text) => dispatch => {
-  fetch(`http://localhost:8000/${id}`, {
+  fetch(`http://${API_BASE_URL}/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json'
