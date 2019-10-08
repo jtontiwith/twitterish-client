@@ -1,7 +1,7 @@
 import React from 'react';
 import Box from './Box';
 import Logo from './Logo';
-import TextInput from './TextInput';
+import SearchInput from './SearchInput';
 
 const Header = () => {
   return (
@@ -12,7 +12,7 @@ const Header = () => {
         margin={'10px 10px 25px 10px'}
       >
         <Logo />
-        <TextInput />
+        <SearchInput />
       </Box>
   );
 }

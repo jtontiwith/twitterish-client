@@ -3,13 +3,14 @@ import { API_BASE_URL } from '../config';
 //fetch
 export const fetchData = (user) => dispatch => {
   dispatch(request());
-  fetch(`${API_BASE_URL}/${user}`).then(res => {
+  fetch(`${API_BASE_URL}/api/${user}`).then(res => {
     if(!res.ok) {
       return Promise.reject(res.statusText)
     }
     return res.json()
   }).then(data => { 
-    dispatch(success(data));  
+    console.log(data)
+    //dispatch(success(data));  
   }).catch(err => {
     console.log(err) //notification in production 
   });

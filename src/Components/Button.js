@@ -24,6 +24,7 @@ const Button = (props) => {
   return (
     <StyledButton 
       onClick={props.onClick}
+      onSubmit={props.onSubmit}
       background={props.background}
       width={props.width}
       height={props.height}
@@ -32,6 +33,7 @@ const Button = (props) => {
       right={props.right}
       bottom={props.bottom}
       verticalAlign={props.verticalAlign}
+      type={props.type}
     >
       {props.children}
     </StyledButton>

@@ -31,7 +31,7 @@ const Span = styled.span`
   top: 9px;
 `;
 
-const TextInput = () => {
+const SearchInput = () => {
   return (
       <Div>
         <StyledTextInput placeholder='Search' />
@@ -40,4 +40,4 @@ const TextInput = () => {
     )
 }
 
-export default TextInput;
+export default SearchInput;
